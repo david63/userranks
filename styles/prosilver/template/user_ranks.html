@@ -1,0 +1,49 @@
+{% include 'overall_header.html' %}
+{% INCLUDECSS '@david63_userranks/user_ranks.css' %}
+
+{% if S_USER_RANKS_LINK_ENABLED or S_USER_RANKS_QUICK_LINK_ENABLED and S_USER_LOGGED_IN and not S_IS_BOT %}
+	<h2>{{ lang('USER_RANKS') }}</h2>
+	<div class="forabg responsive-hide">
+		<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+					<dl class="row-item">
+						<dt>
+							<div class="rank-image">{{ lang('RANK_IMAGE') }}</div>
+							<div class="rank-title">{{ lang('RANK_TITLE') }}</div>
+							<div class="rank-minimum">{{ lang('RANK_MINIMUM') }}</div>
+						</dt>
+					</dl>
+				</li>
+			</ul>
+
+			<ul class="topiclist topics">
+				{% for rank in ranks %}
+					<li class="row{% if rank.S_ROW_COUNT is even %} bg1{% else %} bg2{% endif %}">
+						<dl class="row-item">
+							<dd class="rank-image">{% if rank.S_RANK_IMAGE %}<img src="{{ rank.RANK_IMAGE }}" alt="{{ rank.RANK_TITLE }}" title="{{ rank.RANK_TITLE }}" />{% else %}{{ lang('NO_RANK_DATA') }}{% endif %}</dd>
+							<dd class="rank-title">{{ rank.RANK_TITLE }}</dd>
+							<dd class="rank-minimum">{% if rank.S_SPECIAL_RANK %}{{ lang('NO_RANK_DATA') }}{% else %}{{ rank.MIN_POSTS }}{% endif %}</dd>
+							{% if U_USER_RANKS_MEMBERS %}
+								<dd class="rank-members">
+									{% for member in rank.rank_member %}
+										{{ member.MEMBERS }}{% if not member.S_LAST_ROW %}{{ lang('COMMA_SEPARATOR') }}{% endif %}
+									{% endfor %}
+								</dd>
+							{% endif %}
+						</dl>
+					</li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+{% else %}
+	<div class="panel" id="message">
+		<div class="inner">
+			<h2 class="message-title">{{ lang('INFORMATION') }}</h2>
+			<p>{{ lang('NOT_AUTHORISED') }}<br><br><a href="{{ ROOT_PATH }}index.php">{{ lang('RETURN_TO_INDEX') }}</a></p>
+		</div>
+	</div>
+{% endif %}
+
+{% include 'overall_footer.html' %}

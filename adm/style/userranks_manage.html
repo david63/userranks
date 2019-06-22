@@ -1,0 +1,89 @@
+{% include '@' ~ NAMESPACE ~ '/head_panel.html' %}
+
+<form id="userranks" method="post" action="{{ U_ACTION }}">
+	<fieldset>
+		<legend>{{ lang('USER_RANKS_OPTIONS') }}</legend>
+
+		<dl>
+			<dt><label for="userranks_header_link">{{ lang('USER_RANKS_HEADER') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<input type="radio" id="userranks_header_link1" name="userranks_header_link" value="1"{% if USER_RANKS_HEADER %} checked="checked"{% endif %} />
+				<label class="set" for="userranks_header_link1">{{ lang('YES') }}</label>
+				<input type="radio" id="userranks_header_link0" name="userranks_header_link" value="0"{% if not USER_RANKS_HEADER %} checked="checked"{% endif %} />
+				<label class="unset" for="userranks_header_link0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="userranks_quick_link">{{ lang('USER_RANKS_QUICK_LINK') }}{{ lang('COLON') }}</label></dt>
+			<dd>
+				<input type="radio" id="userranks_quick_link1" name="userranks_quick_link" value="1"{% if USER_RANKS_QUICK_LINK %} checked="checked"{% endif %} />
+				<label class="set" for="userranks_quick_link1">{{ lang('YES') }}</label>
+				<input type="radio" id="userranks_quick_link0" name="userranks_quick_link" value="0"{% if not USER_RANKS_QUICK_LINK %} checked="checked"{% endif %} />
+				<label class="unset" for="userranks_quick_link0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="userranks_members">{{ lang('USER_RANKS_MEMBERS') }}{{ lang('COLON') }}</label><br><span>{{ lang('USER_RANKS_MEMBERS_EXPLAIN') }}</span></dt>
+			<dd>
+				<input type="radio" id="userranks_members1" name="userranks_members" value="1"{% if USER_RANKS_MEMBERS %} checked="checked"{% endif %} />
+				<label class="set" for="userranks_members1">{{ lang('YES') }}</label>
+				<input type="radio" id="userranks_members0" name="userranks_members" value="0"{% if not USER_RANKS_MEMBERS %} checked="checked"{% endif %} />
+				<label class="unset" for="userranks_members0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="userranks_special">{{ lang('USER_RANKS_SPECIAL') }}{{ lang('COLON') }}</label><br><span>{{ lang('USER_RANKS_SPECIAL_EXPLAIN') }}</span></dt>
+			<dd>
+				<input type="radio" id="userranks_special1" name="userranks_special" value="1"{% if USER_RANKS_SPECIAL %} checked="checked"{% endif %} />
+				<label class="set" for="userranks_special1">{{ lang('YES') }}</label>
+				<input type="radio" id="userranks_special0" name="userranks_special" value="0"{% if not USER_RANKS_SPECIAL %} checked="checked"{% endif %} />
+				<label class="unset" for="userranks_special0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="userranks_ignore_bots">{{ lang('USER_RANKS_BOTS') }}{{ lang('COLON') }}</label><br><span>{{ lang('USER_RANKS_BOTS_EXPLAIN') }}</span></dt>
+			<dd>
+				<input type="radio" id="userranks_ignore_bots1" name="userranks_ignore_bots" value="1"{% if USER_RANKS_BOTS %} checked="checked"{% endif %} />
+				<label class="set" for="userranks_ignore_bots1">{{ lang('YES') }}</label>
+				<input type="radio" id="userranks_ignore_bots0" name="userranks_ignore_bots" value="0"{% if not USER_RANKS_BOTS %} checked="checked"{% endif %} />
+				<label class="unset" for="userranks_ignore_bots0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="userranks_members_admin">{{ lang('USER_RANKS_MEMBERS_ADMIN') }}{{ lang('COLON') }}</label><br><span>{{ lang('USER_RANKS_MEMBERS_ADMIN_EXPLAIN') }}</span></dt>
+			<dd>
+				<input type="radio" id="userranks_members_admin1" name="userranks_members_admin" value="1"{% if USER_RANKS_MEMBERS_ADMIN %} checked="checked"{% endif %} />
+				<label class="set" for="userranks_members_admin1">{{ lang('YES') }}</label>
+				<input type="radio" id="userranks_members_admin0" name="userranks_members_admin" value="0"{% if not USER_RANKS_MEMBERS_ADMIN %} checked="checked"{% endif %} />
+				<label class="unset" for="userranks_members_admin0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+		<dl>
+			<dt><label for="userranks_special_admin">{{ lang('USER_RANKS_SPECIAL_ADMIN') }}{{ lang('COLON') }}</label><br><span>{{ lang('USER_RANKS_SPECIAL_ADMIN_EXPLAIN') }}</span></dt>
+			<dd>
+				<input type="radio" id="userranks_special_admin1" name="userranks_special_admin" value="1"{% if USER_RANKS_SPECIAL_ADMIN %} checked="checked"{% endif %} />
+				<label class="set" for="userranks_special_admin1">{{ lang('YES') }}</label>
+				<input type="radio" id="userranks_special_admin0" name="userranks_special_admin" value="0"{% if not USER_RANKS_SPECIAL_ADMIN %} checked="checked"{% endif %} />
+				<label class="unset" for="userranks_special_admin0">{{ lang('NO') }}</label>
+			</dd>
+		</dl>
+
+	</fieldset>
+
+	<fieldset>
+		<legend>{{ lang('ACP_SUBMIT_CHANGES') }}</legend>
+		<p class="submit-buttons">
+			<input class="adm-button" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+			<input class="adm-button" type="reset" id="reset" name="reset" value="{{ lang('RESET') }}" />
+		</p>
+		{{ S_FORM_TOKEN }}
+	</fieldset>
+</form>
+
+{% include '@' ~ NAMESPACE ~ '/donate.html' %}

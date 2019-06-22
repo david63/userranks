@@ -1,0 +1,3 @@
+{% if S_USER_RANKS_LINK_ENABLED or S_USER_RANKS_QUICK_LINK_ENABLED and S_USER_LOGGED_IN %}
+	<li class="current"><a href="{{ U_USER_RANKS }}">{{ lang('USER_RANKS') }}</a></li>
+{% endif %}

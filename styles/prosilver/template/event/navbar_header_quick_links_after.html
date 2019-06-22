@@ -1,0 +1,7 @@
+{% if S_USER_RANKS_QUICK_LINK_ENABLED and S_USER_LOGGED_IN %}
+	<li>
+		<a href="{{ U_USER_RANKS }}" role="menuitem">
+			<i class="icon fa-star-half-o fa-fw" aria-hidden="true"></i><span>{{ lang('USER_RANKS') }}</span>
+		</a>
+	</li>
+{% endif %}

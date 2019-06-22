@@ -1,0 +1,43 @@
+imports:
+    - { resource: phpbb_tables.yml }
+
+services:
+    david63.userranks.listener:
+        class: david63\userranks\event\listener
+        arguments:
+            - '@config'
+            - '@template'
+            - '@controller.helper'
+            - '@auth'
+            - '@david63.userranks.core.functions'
+        tags:
+            - { name: event.listener }
+
+    david63.userranks.controller:
+        class: david63\userranks\controller\main_controller
+        arguments:
+            - '@config'
+            - '@template'
+            - '@dbal.conn'
+            - '@controller.helper'
+            - '@path_helper'
+            - '@cache'
+            - '@auth'
+            - '@language'
+            - '%tables%'
+
+    david63.userranks.admin.controller:
+        class: david63\userranks\controller\admin_controller
+        arguments:
+            - '@config'
+            - '@request'
+            - '@template'
+            - '@user'
+            - '@log'
+            - '@language'
+            - '@david63.userranks.core.functions'
+
+    david63.userranks.core.functions:
+        class: david63\userranks\core\functions
+        arguments:
+            - '@ext.manager'

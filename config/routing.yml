@@ -1,0 +1,3 @@
+david63_userranks_main_controller:
+    path: /userranks/{name}
+    defaults: { _controller: david63.userranks.controller:display }
