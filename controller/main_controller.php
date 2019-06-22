@@ -84,7 +84,7 @@ class main_controller implements main_interface
 	* @return \Symfony\Component\HttpFoundation\Response A Symfony Response object
 	* @access public
 	*/
-   	public function display($name)
+	public function display($name)
 	{
 		// Get the rank details
 		$sql = 'SELECT *
@@ -121,7 +121,7 @@ class main_controller implements main_interface
 								'MEMBERS' => get_username_string('full', $row_rank['user_id'], $row_rank['username'], $row_rank['user_colour']),
 							));
 						}
-		   			}
+					}
 					else
 					{
 						$this->template->assign_block_vars('ranks.rank_member', array(
@@ -144,10 +144,10 @@ class main_controller implements main_interface
 	}
 
 	/**
- 	* Obtain an array of users in a rank.
- 	*
- 	* @return array
- 	*/
+	* Obtain an array of users in a rank.
+	*
+	* @return array
+	*/
 	protected function get_user_rank_data($rank_id)
 	{
 		$rank_data = $rank_users = array();
@@ -167,7 +167,7 @@ class main_controller implements main_interface
 			{
 				if (!empty($row['user_rank']))
 				{
-			   	$rank_data[$row['user_id']] = $row;
+					$rank_data[$row['user_id']] = $row;
 				}
 				else if ($row['user_posts'] !== false)
 				{

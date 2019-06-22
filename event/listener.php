@@ -103,8 +103,8 @@ class listener implements EventSubscriberInterface
 	public function page_header($event)
 	{
 		$this->template->assign_vars(array(
-			'S_USER_RANKS_LINK_ENABLED'			=> $this->config ['userranks_header_link'],
-			'S_USER_RANKS_QUICK_LINK_ENABLED'	=> $this->config ['userranks_quick_link'],
+			'S_USER_RANKS_LINK_ENABLED'			=> $this->config['userranks_header_link'],
+			'S_USER_RANKS_QUICK_LINK_ENABLED'	=> $this->config['userranks_quick_link'],
 
 			'U_USER_RANKS' 						=> $this->controller_helper->route('david63_userranks_main_controller', array('name' => 'ranks')),
 			'U_USER_RANKS_MEMBERS'				=> $this->config['userranks_members'] || ($this->config['userranks_members_admin'] && $this->auth->acl_get('a_')),
