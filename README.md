@@ -7,10 +7,11 @@ Displays a list of user ranks and the members in that rank.
 [![Latest Stable Version](https://poser.pugx.org/david63/userranks/v/stable)](https://packagist.org/packages/david63/userranks)
 [![Latest Unstable Version](https://poser.pugx.org/david63/userranks/v/unstable)](https://packagist.org/packages/david63/userranks)
 [![Total Downloads](https://poser.pugx.org/david63/userranks/downloads)](https://packagist.org/packages/david63/userranks)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/7fb993a4e735474491a805b0be560e89)](https://www.codacy.com/manual/david63/userranks?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=david63/userranks&amp;utm_campaign=Badge_Grade)
 
 ## Minimum Requirements
-* phpBB 3.2.0
-* PHP 5.4
+* phpBB 3.3.0
+* PHP 7.1.3
 
 ## Install
 1. [Download the latest release](https://github.com/david63/userranks/archive/3.2.zip) and unzip it.
@@ -30,4 +31,4 @@ Displays a list of user ranks and the members in that rank.
 ## License
 [GNU General Public License v2](http://opensource.org/licenses/GPL-2.0)
 
-© 2019 - David Wood
+© 2020 - David Wood
