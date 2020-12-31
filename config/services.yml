@@ -38,3 +38,6 @@ services:
         class: david63\userranks\core\functions
         arguments:
             - '@ext.manager'
+
+    _defaults:
+        public: true

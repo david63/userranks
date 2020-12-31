@@ -2,12 +2,16 @@
 
 Displays a list of user ranks and the members in that rank.
 
-[![Build Status](https://travis-ci.com/david63/userranks.svg?branch=master)](https://travis-ci.com/david63/userranks)
+[![Build Status](https://github.com/david63/userranks/workflows/Tests/badge.svg)](https://github.com/phpbb-extensions/david63/userranks)
 [![License](https://poser.pugx.org/david63/userranks/license)](https://packagist.org/packages/david63/userranks)
 [![Latest Stable Version](https://poser.pugx.org/david63/userranks/v/stable)](https://packagist.org/packages/david63/userranks)
 [![Latest Unstable Version](https://poser.pugx.org/david63/userranks/v/unstable)](https://packagist.org/packages/david63/userranks)
 [![Total Downloads](https://poser.pugx.org/david63/userranks/downloads)](https://packagist.org/packages/david63/userranks)
+[![codecov](https://codecov.io/gh/david63/userranks/branch/master/graph/badge.svg?token=D2500PgRex)](https://codecov.io/gh/david63/userranks)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/7fb993a4e735474491a805b0be560e89)](https://www.codacy.com/manual/david63/userranks?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=david63/userranks&amp;utm_campaign=Badge_Grade)
+
+[![Compatible](https://img.shields.io/badge/compatible-phpBB:3.2.x-blue.svg)](https://shields.io/)
+[![Compatible](https://img.shields.io/badge/compatible-phpBB:3.3.x-blue.svg)](https://shields.io/)
 
 ## Minimum Requirements
 * phpBB 3.3.0

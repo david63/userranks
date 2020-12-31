@@ -150,7 +150,7 @@ class main_controller implements main_interface
 	*/
 	protected function get_user_rank_data($rank_id)
 	{
-		$rank_data = $rank_users = array();
+		$rank_data = $rank_users = [];
 
 		if (($rank_data = $this->cache->get('_rank_data')) === false)
 		{
